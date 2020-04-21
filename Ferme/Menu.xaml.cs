@@ -53,6 +53,29 @@ namespace Ferme
         private void TitleAgregarUsuario_Click(object sender, RoutedEventArgs e)
         {
             FlyUsuarioNuevo.IsOpen = true;
+            FlyProveedor.IsOpen = false;
+        }
+        
+         private void TileProveedor_Click(object sender, RoutedEventArgs e)
+        {
+            FlyProveedor.IsOpen = true;
+            FlyUsuarioNuevo.IsOpen = false;
+            
+        }
+        
+            private void TitleRegistroFactura_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TitleRegistroBoleta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TitleRegistroProducto_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private async void BtnIngresar_Click(object sender, RoutedEventArgs e)
