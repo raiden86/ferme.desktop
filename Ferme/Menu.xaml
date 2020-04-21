@@ -42,5 +42,19 @@
             </Canvas>
         </Controls:Flyout>
 
+             <Controls:Flyout x:Name="FlyProveedor" Margin="497,0,0,0" Position="Right" Header="Registro Proveedor" Background="#FF302C2C" Foreground="#FFFBF6F6">
+            <Canvas >
+
+                <TextBox x:Name="txtIdProveedor" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Id" RenderTransformOrigin="4.281,0.635" Width="250" Canvas.Left="40" Canvas.Top="54" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <TextBox x:Name="txtNombreProveedor" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese Nombre" RenderTransformOrigin="4.281,0.635" Width="250" Canvas.Left="40" Canvas.Top="108" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <TextBox x:Name="txtDireccionProveedor" Controls:TextBoxHelper.ClearTextButton="True"  Controls:TextBoxHelper.Watermark="Ingrese Direccion" RenderTransformOrigin="4.281,0.635" Width="250" Canvas.Left="40" Canvas.Top="336" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <TextBox x:Name="txtTelefonoProveedor" Controls:TextBoxHelper.ClearTextButton="True"  Controls:TextBoxHelper.Watermark="Ingrese Telefono" RenderTransformOrigin="4.281,0.635" Width="250" Canvas.Left="40" Canvas.Top="220" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <TextBox x:Name="txtEmailProveedor" Controls:TextBoxHelper.ClearTextButton="True"  Controls:TextBoxHelper.Watermark="Ingrese Email" RenderTransformOrigin="4.281,0.635" Width="250" Canvas.Left="40" Canvas.Top="276" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <TextBox x:Name="txtRutProveedor" Controls:TextBoxHelper.ClearTextButton="True"  Controls:TextBoxHelper.Watermark="Ingrese Rut" RenderTransformOrigin="4.281,0.635" Width="250" Canvas.Left="40" Canvas.Top="162" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <TextBox x:Name="txtBuscarProveedor" Controls:TextBoxHelper.ClearTextButton="True"  Controls:TextBoxHelper.Watermark="Buscar Rut" RenderTransformOrigin="4.281,0.635" Width="183" Canvas.Left="315" Canvas.Top="91" Background="#FF2B2828" Foreground="White" FontSize="16" />
+                <Button x:Name="BtnBuscar" Content="BUSCAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="135" BorderBrush="{x:Null}" Foreground="#FFFBF4F4" FontFamily="Georgia" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF1E25BD" Click="BtnIngresar_Click" Canvas.Left="342" Canvas.Top="139" Height="49" FontSize="14"/>
+            </Canvas>
+        </Controls:Flyout>
+            
     </Grid>
 </Controls:MetroWindow>
