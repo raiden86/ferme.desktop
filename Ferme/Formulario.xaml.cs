@@ -43,9 +43,7 @@ namespace Ferme
             clientito.Email = txtEmail.Text;
             clientito.Direccion = txtDireccion.Text;
             clientito.Telefono = txtTelefono.Text;
-            clientito.Contraseña = txtContraseña.Text;
-            clientito.Confcontraseña = txtConfContraseña.Text;
-            clientito.Usuario = txtNick.Text;
+     
 
 
 
@@ -61,12 +59,7 @@ namespace Ferme
                 await this.ShowMessageAsync("Falta Campo", " APELLIDOS");
             else if (string.IsNullOrEmpty(txtDireccion.Text))
                 await this.ShowMessageAsync("Falta Campo", " DIRECCION");
-            else if (string.IsNullOrEmpty(txtContraseña.Text))
-                await this.ShowMessageAsync("Falta Campo", " CONTRASEÑA");
-            else if (string.IsNullOrEmpty(txtConfContraseña.Text))
-                await this.ShowMessageAsync("Falta Campo", " REPETIR CONTRASEÑA");
-            else if (string.IsNullOrEmpty(txtNick.Text))
-                await this.ShowMessageAsync("Falta Campo", " USUARIO");
+          
 
 
             else

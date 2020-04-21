@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Menu = Ferme.Menu;
 
 namespace WpfFragmentos
 {
@@ -42,17 +43,24 @@ namespace WpfFragmentos
 
         private async void BtnIngresar_Click(object sender, RoutedEventArgs e)
         {
+
+
             Clientes cli = new Clientes();
 
-            if (string.IsNullOrEmpty(txtUsuario.Text))
-                await this.ShowMessageAsync("Falta Campo", " Usuario ");
-            if (string.IsNullOrEmpty(txtContraseña.Password))
-                await this.ShowMessageAsync("Falta Campo", " Contraseña ");
+            if (txtUsuario.Text == "admin" && txtContraseña.Password == "1234")
 
+            {
+                await this.ShowMessageAsync("Hola", string.Format("BIENVENIDO"));
+                Menu ver = new Menu();
+                this.Close();
+                ver.ShowDialog();
+            }
             else
             {
-                await this.ShowMessageAsync("Aviso", string.Format("BIENVENIDO"));
+                await this.ShowMessageAsync("Aviso", string.Format("Tus Datos son incorrectos"));
                 misCli.Add(cli);
+
+              
 
             }
         }

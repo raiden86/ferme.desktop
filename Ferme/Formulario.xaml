@@ -10,30 +10,27 @@
         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
     
-        Title="Formulario" Height="450" Width="707">
+        Title="Formulario" Height="450" Width="707" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" Cursor="Hand">
     <Grid Background="#FF0F0E0E" Margin="0,0,2,-101">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="22" Margin="90,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
         <Label Content="NOMBRE" HorizontalAlignment="Left" Margin="90,98,0,0" VerticalAlignment="Top" Width="83" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
         <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Height="22" Margin="90,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
         <Label Content="APELLIDOS" HorizontalAlignment="Left" Margin="90,158,0,0" VerticalAlignment="Top" Width="104" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
-        <TextBox x:Name="txtContraseña" HorizontalAlignment="Left" Height="22" Margin="380,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
-        <Label x:Name="lblNick" Content="USUARIO" HorizontalAlignment="Left" Margin="382,158,0,0" VerticalAlignment="Top" Width="83" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
         <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="22" Margin="380,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
         <Label x:Name="lblRut" Content="RUT" HorizontalAlignment="Left" Margin="90,218,0,0" VerticalAlignment="Top" Width="83" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
         <Label x:Name="lblTelefono" Content="TELEFONO" HorizontalAlignment="Left" Margin="380,98,0,0" VerticalAlignment="Top" Width="104" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
         <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="22" Margin="90,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
-        <TextBox x:Name="txtConfContraseña" HorizontalAlignment="Left" Height="22" Margin="380,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
-        <Label x:Name="lblContraseña" Content="CONTRASEÑA" HorizontalAlignment="Left" Margin="380,218,0,0" VerticalAlignment="Top" Width="124" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
-        <Label x:Name="lblRepetirContraseña" Content="CONFIRMAR CONTRASEÑA" HorizontalAlignment="Left" Margin="380,278,0,0" VerticalAlignment="Top" Width="223" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
 
         <Button x:Name="BtnGuardar" Content="GUARDAR" HorizontalAlignment="Left" Margin="380,367,0,0" VerticalAlignment="Top" Width="85" BorderBrush="{x:Null}" Foreground="#FFFBF4F4" FontFamily="Georgia" mah:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF1E25BD" Click="BtnGuardar_Click"/>
         <Label x:Name="lblRegistrarUsuario" Content="REGISTRO DE USUARIO" HorizontalAlignment="Left" Margin="207,22,0,0" VerticalAlignment="Top" Width="237" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="18"/>
         <Button x:Name="BtnCancelar" Content="CANCELAR" HorizontalAlignment="Left" Margin="488,367,0,0" VerticalAlignment="Top" Width="85" BorderBrush="{x:Null}" Foreground="#FFFBF4F4" FontFamily="Georgia" mah:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF1E25BD" Click="BtnCancelar_Click"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="22" Margin="90,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
-        <Label x:Name="lblEmail" Content="EMAIL" HorizontalAlignment="Left" Margin="90,278,0,0" VerticalAlignment="Top" Width="83" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
-        <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Height="22" Margin="90,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
-        <Label x:Name="lblDireccion" Content="DIRECCION" HorizontalAlignment="Left" Margin="90,338,0,0" VerticalAlignment="Top" Width="104" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
-        <TextBox x:Name="txtNick" HorizontalAlignment="Left" Height="22" Margin="380,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="22" Margin="380,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
+        <Label x:Name="lblEmail" Content="EMAIL" HorizontalAlignment="Left" Margin="380,158,0,0" VerticalAlignment="Top" Width="83" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
+        <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Height="22" Margin="380,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Background="#FF2B2828" Foreground="White" BorderBrush="{x:Null}" FontFamily="Georgia" FontSize="16"/>
+        <Label x:Name="lblDireccion" Content="DIRECCION" HorizontalAlignment="Left" Margin="380,218,0,0" VerticalAlignment="Top" Width="104" Foreground="#FFF7F2F2" FontFamily="Georgia" FontSize="16" Height="29"/>
 
     </Grid>
 </Controls:MetroWindow>

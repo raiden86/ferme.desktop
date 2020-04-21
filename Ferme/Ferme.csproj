@@ -66,6 +66,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="usuariosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usuariosDataSet.xsd</DependentUpon>
+    </Compile>
     <Page Include="Formulario.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,6 +99,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +113,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -126,6 +138,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="usuariosDataSet.xsc">
+      <DependentUpon>usuariosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="usuariosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usuariosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usuariosDataSet.xss">
+      <DependentUpon>usuariosDataSet.xsd</DependentUpon>
+    </None>
     <Resource Include="Resources\Entypo.ttf" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +159,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PHOTO-2020-04-17-10-04-10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\User-Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\logoo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\User-New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="registro-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\registro-proovedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Facturas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\registro-boletas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
