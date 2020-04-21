@@ -24,9 +24,17 @@ namespace Ferme
     /// </summary>
     public partial class Menu : MetroWindow
     {
+        private List<Clientes> users;
+
+
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public void setUsers(List<Clientes> users)
+        {
+            this.users = users;
         }
 
         private void Tile_Click(object sender, RoutedEventArgs e)
@@ -37,7 +45,7 @@ namespace Ferme
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
             MainWindow miMainWindows = new MainWindow();
-
+            miMainWindows.setUsers(users);
             miMainWindows.Show();
             this.Close();
         }
@@ -49,11 +57,47 @@ namespace Ferme
 
         private async void BtnIngresar_Click(object sender, RoutedEventArgs e)
         {
-            await this.ShowMessageAsync("Exito", "Usuario Agregado");
+            Clientes newUser = new Clientes();
+
+            if ( !IsUserValid() )
+            {
+                await this.ShowMessageAsync("Error", "Debe llenar todos los datos del Usuario");
+            }
+            else if ( !IsPasswordValid() )
+            {
+                await this.ShowMessageAsync("Error", "La contraseña no coincide con su confirmacion");
+
+            }
+            else 
+            {
+                newUser.Usuario = txtNuevoUsuario.Text;
+                newUser.Contraseña = txtNuevaContraseña.Password;
+                users.Add(newUser);
+
+                await this.ShowMessageAsync("Exito", "Usuario A gregado");
+                ClearUserForm();
+            }
+
+        }
+
+        private void ClearUserForm()
+        {
             txtNuevoUsuario.Text = string.Empty;
             txtNuevaContraseña.Password = string.Empty;
             txtRepetirContraseña.Password = string.Empty;
             txtNuevoUsuario.Focus();
+        }
+
+        private Boolean IsUserValid()
+        {
+            return !string.IsNullOrEmpty(txtNuevoUsuario.Text)
+                    && !string.IsNullOrEmpty(txtNuevaContraseña.Password)
+                    && !string.IsNullOrEmpty(txtRepetirContraseña.Password);
+        }
+
+        private Boolean IsPasswordValid()
+        {
+            return txtNuevaContraseña.Password.Equals(txtRepetirContraseña.Password);
         }
     }
 }
